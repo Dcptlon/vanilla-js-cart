@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.cont-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-card .nombre {
+    order: 2;
+    font-size: 18px;
+    color: #333;
+}
+
+.product-card .precio {
+    order: 3;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cont-img {
+    order: 1;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.cont-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.button-cart {
+    order: 4;
+    background-color: #f1f1f1;
+    color: rgb(46, 46, 46);
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.button-cart:hover {
+    background-color: #d8d8d8;
+}
+
+.button-cart:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+/* Carrito */
+.cont-carrito {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    position: sticky;
+    top: 20px;
+}
+
+.cont-carrito > p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.cont-carrito > p span {
+    font-weight: bold;
+}
+
+.cart-lista {
+    list-style: none;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+.cart-lista li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.cart-opciones {
+    display: flex;
+    gap: 10px;
+}
+
+
+.montoTotal {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bt-item {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.bt-cantidad {
+    background-color: #f1f1f1;
+    color: #333;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.bt-cantidad:hover {
+    background-color: #d8d8d8;
+}
+
+.bt-Eliminar-item {
+    background-color: #de0000;
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.bt-Eliminar-item:hover {
+    background-color: #d30000;
+}
+
+#btVaciar {
+    background-color: #d30000;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    color: #d8d8d8;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+#btVaciar:hover {
+    background-color: #bc1300;
+    transition: background-color 0.3s;
+}
+
+.cont-carrito > button:last-child {
+    background-color: #1f89d0;
+    color: #d8d8d8;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.cont-carrito > button:last-child:hover {
+    background-color: #1c96ce;
+}
+
+/* Toast */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .cont-productos {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .cont-carrito {
+        position: static;
+    }
+}
