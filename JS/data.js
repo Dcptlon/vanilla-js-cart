@@ -38,7 +38,7 @@ export const productos = [
         stock: 22,
         stock_minimo: 10,
         stock_maximo: 5,
-        
+
     },
     {
         id: 5,
@@ -57,5 +57,42 @@ export const productos = [
         stock: 35,
         stock_minimo: 10,
         stock_maximo: 20,
-    }
+    },
+    {
+        id: 7,
+        nombre: "Teclado Mecánico",
+        precio: 18999,
+        imagen: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=400",
+        stock: 8,
+        stock_minimo: 3,
+        stock_maximo: 10,
+    },
+    {
+        id: 8,
+        nombre: "Mouse Gamer",
+        precio: 12999,
+        imagen: "https://images.unsplash.com/photo-1613141412501-9012977f1969?w=400",
+        stock: 20,
+        stock_minimo: 5,
+        stock_maximo: 10,
+    },
+    {
+        id: 9,
+        nombre: "Monitor Full HD 24\"",
+        precio: 99999,
+        imagen: "https://plus.unsplash.com/premium_photo-1664699099341-b7c4229a8d97?w=400",
+        stock: 6,
+        stock_minimo: 2,
+        stock_maximo: 5,
+    },
+    {
+        id: 10,
+        nombre: "Parlante Bluetooth Portátil",
+        precio: 7499,
+        imagen: "https://images.unsplash.com/photo-1589256469067-ea99122bbdc4?w=400",
+        stock: 14,
+        stock_minimo: 5,
+        stock_maximo: 10,
+    },
+
 ];
